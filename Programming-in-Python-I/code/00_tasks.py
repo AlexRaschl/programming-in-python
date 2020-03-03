@@ -35,7 +35,8 @@ compare your solution to the solution given in the file 00_solutions.py.
 # content False.
 
 # Your code here #
-
+a = 1
+b = False
 
 #
 # Task 2
@@ -47,7 +48,7 @@ compare your solution to the solution given in the file 00_solutions.py.
 a = 5.356
 
 # Your code here #
-
+a = int(a)  # Result: 5
 
 #
 # Task 3
@@ -58,7 +59,9 @@ a = 5.356
 # What will happen to the string "test" after deleting variable 'b'?
 
 # Your code here #
-
+a = b = 'test'
+a = 2
+del b # del 'test'
 
 #
 # Task 4
@@ -70,7 +73,9 @@ a = 5.356
 # Finally, create a variable 'c' that repeats this sentence 3 times.
 
 # Your code here #
-
+a = 123
+b = 'this is a test' + str(123)
+c = b * 3
 
 #
 # Task 5
@@ -86,3 +91,4 @@ print(f"value a: {a}")
 print(f"value b: {b}")
 
 # No code required for the solution of this task #
+# b is too large for float thus other value.
