@@ -37,7 +37,8 @@ compare your solution to the solution given in the file 01_solutions.py.
 #
 
 # Your code here #
-
+a = [5, 'a', 7]
+b = a[1]
 
 #
 # Task 2
@@ -50,7 +51,8 @@ compare your solution to the solution given in the file 01_solutions.py.
 a = [1, 2, 3, 4]
 
 # Your code here #
-
+b = a + [5]
+b[0] = 0
 
 #
 # Task 3
@@ -63,7 +65,8 @@ a = [1, 2, 3, 4]
 a = (1, 2, 3, 4)
 
 # Your code here #
-
+b = a + (5,)
+c = (0,) + b[1:]  # Immutable otherwise
 
 #
 # Task 4
@@ -73,7 +76,7 @@ a = (1, 2, 3, 4)
 a = dict(a=1, b=2)  # or a = {'a':1, 'b':2}
 
 # Your code here #
-
+a['c'] = 3
 
 #
 # Task 5
@@ -84,8 +87,8 @@ a = dict(a=1, b=2)  # or a = {'a':1, 'b':2}
 # in a new list. You can solve this using slicing.
 
 # Your code here #
-
-
+a = range(0, 100)
+b = a[50:70:3]
 #
 # Task 6
 #
@@ -96,3 +99,6 @@ a = dict(a=1, b=2)  # or a = {'a':1, 'b':2}
 a = 'element1,element2;element3;element4;element5,element6'
 
 # Your code here #
+b = a.replace(',',';')
+b = b.split(';')
+b.reverse()
