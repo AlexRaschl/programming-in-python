@@ -26,6 +26,7 @@ def verify_files(input_dir: str, output_dir: str, logfile: str) -> int:
     def write_log(filename: str, err: int):
         log_handle.write(f"{os.path.relpath(filename, os.path.abspath(input_dir))};{err}\n")
 
+    # Check if file has the specified properties
     def process_file(filename):
         if os.path.splitext(filename)[1] not in ('.jpg', '.jpeg', '.JPEG', '.JPG'):
             return write_log(filename, 1)
@@ -49,6 +50,7 @@ def verify_files(input_dir: str, output_dir: str, logfile: str) -> int:
         except IOError:
             return write_log(filename, 3)
 
+    # For all files in directory call process function
     for name in tqdm(sorted(glob(os.path.join(input_dir, "**/*"), recursive=True))):
         if os.path.isfile(name):
             process_file(name)
@@ -58,6 +60,6 @@ def verify_files(input_dir: str, output_dir: str, logfile: str) -> int:
 
 
 if __name__ == '__main__':
-    in_dir = "H:/Datasets/python2/Dataset/dataset_part_0"
-    out_dir = "H:/Datasets/python2/Dataset/dataset_out_0"
+    in_dir = "H:/Datasets/python2/Dataset/dataset_part_1"
+    out_dir = "H:/Datasets/python2/Dataset/dataset_out_1"
     verify_files(in_dir, out_dir, 'log.txt')
