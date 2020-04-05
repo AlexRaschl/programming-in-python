@@ -283,8 +283,6 @@ from os import path
 numpy_array = path.join("'some', 'directory'")
 
 # You can import multiple modules with one statement using commas
-import os, sys
-from os import path, makedirs
 
 # If you import a module multiple times, python will usually not import it anew
 
@@ -300,7 +298,7 @@ from os import path, makedirs
 
 # The following line imports function 'add' from file "my_module.py" and
 # assigns it the name 'my_add'
-from my_module import add as my_add
+from ue.my_module import add as my_add
 
 argument_list = list(range(10))
 print(my_add(*argument_list))
