@@ -31,7 +31,7 @@ class ImageNormalizer:
     # Return Generator of normalized image data
     def get_images(self):
         for idx, file in enumerate(self.file_names):
-            img = np.asarray(Image.open(file))
+            img = np.asarray(Image.open(file), np.float32)
             yield (img - img.mean()) / img.std()
 
 
